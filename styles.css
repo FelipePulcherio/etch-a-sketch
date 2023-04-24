@@ -47,6 +47,22 @@ body {
   color: gold;
 }
 
+
+
+.frame2 .canvas {
+  height: 80%;
+  width: 85%;
+  background-color: rgb(204, 204, 204);
+  border-radius: 35px;
+}
+
+.frame2 .canvas {
+  height: 100%;
+  width: 85%;
+  background-color: rgb(204, 204, 204);
+  border-radius: 35px;
+}
+
 .footer {
   width: 1000px;
   font-size: 24px;
