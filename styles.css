@@ -29,3 +29,10 @@ body {
   gap: 20px;
   margin-bottom: 15px;
 }
+
+.footer img {
+  width: 27px;
+  height: 27px;
+  margin: 0;
+  padding: 0px;
+}
