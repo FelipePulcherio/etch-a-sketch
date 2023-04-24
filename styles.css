@@ -1,6 +1,6 @@
-* {
+/** {
   border: solid black 1px;
-}
+}*/
 
 html {
   width: 100%;
@@ -65,6 +65,18 @@ body {
   border-radius: 8px;
   margin-top: 22px;
   padding-top: 2px;
+}
+
+.sliderContainer {
+  width: 180px;
+  font-size: 22px;
+  text-align: center;
+  margin-top: 18px;
+}
+
+.slider {
+  width: 98%;
+  margin: 5px auto 0px auto;
 }
 
 .frame2 {
