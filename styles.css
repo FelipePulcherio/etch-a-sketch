@@ -19,6 +19,12 @@ body {
   align-items: center;
 }
 
+.game {
+  width: 1000px;
+  display: flex;
+}
+
+
 .footer {
   width: 1000px;
   font-size: 24px;
