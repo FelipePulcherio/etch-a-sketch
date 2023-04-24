@@ -25,6 +25,14 @@ body {
 }
 
 
+.frame1 {
+  width: 300px;
+}
+
+.frame2 {
+  width: 700px;
+}
+
 .footer {
   width: 1000px;
   font-size: 24px;
