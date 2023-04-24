@@ -1,5 +1,5 @@
 * {
-  border: solid red 1px;
+  border: solid black 1px;
 }
 
 html {
@@ -25,13 +25,15 @@ body {
   padding-top: 30px;
 }
 
-
 .frame1 {
   width: 300px;
 }
 
 .frame2 {
   width: 700px;
+  height: 700px;
+  background-color: rgba(230, 70, 70);
+  border-radius: 35px;
 }
 
 .footer {
