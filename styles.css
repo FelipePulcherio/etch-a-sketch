@@ -40,6 +40,13 @@ body {
   align-items: center;
 }
 
+.frame2 .title {
+  font-size: 44px;
+  text-align: center;
+  padding: 15px 15px 15px 15px;
+  color: gold;
+}
+
 .footer {
   width: 1000px;
   font-size: 24px;
