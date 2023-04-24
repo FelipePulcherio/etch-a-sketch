@@ -34,6 +34,18 @@ body {
   align-items: center;
 }
 
+.frame1 button {
+  width: 180px;
+  height: 40px;
+  font-size: 18px;
+  text-align: center;
+  background-color: white;
+  border: solid black 2px;
+  border-radius: 8px;
+  margin-top: 22px;
+  padding-top: 2px;
+}
+
 .frame2 {
   width: 700px;
   height: 700px;
