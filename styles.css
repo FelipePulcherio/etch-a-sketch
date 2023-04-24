@@ -27,6 +27,11 @@ body {
 
 .frame1 {
   width: 300px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .frame2 {
@@ -46,8 +51,6 @@ body {
   padding: 15px 15px 15px 15px;
   color: gold;
 }
-
-
 
 .frame2 .canvas {
   height: 80%;
