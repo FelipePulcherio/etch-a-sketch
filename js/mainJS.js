@@ -56,7 +56,10 @@ function painter () {
       this.style['background-color'] = "#000000";
       break;
     case buttons[2].classList.value == "selected": /*Rainbow*/
-      his.style['background-color'] = "#404040";
+      let randomR = parseInt(Math.random()*256);
+      let randomG = parseInt(Math.random()*256);
+      let randomB = parseInt(Math.random()*256);
+      this.style['background-color'] = `rgb(${randomR}, ${randomG}, ${randomB})`;
       break;
     case buttons[3].classList.value == "selected": /*Eraser*/
       this.style['background-color'] = "#CCCCCC";
