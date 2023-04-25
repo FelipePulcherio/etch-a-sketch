@@ -75,6 +75,33 @@ body {
   margin-top: 18px;
 }
 
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 98%;
+  height: 7px;
+  margin: 5px auto 0px auto;
+  background: rgb(200, 200, 200);
+  border-radius: 5px;
+  background-image: linear-gradient(rgb(230, 80, 80), rgb(230, 80, 80));
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: rgb(230, 80, 80);
+  cursor: ew-resize;
+  box-shadow: 0 0 2px 0 #555;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
 .frame2 {
   width: 700px;
   height: 700px;
