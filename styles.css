@@ -126,7 +126,6 @@ input[type=range]::-webkit-slider-runnable-track {
   height: 100%;
   width: 80%;
   background-color: rgb(204, 204, 204);
-  border-radius: 35px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
