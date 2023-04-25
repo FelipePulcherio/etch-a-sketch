@@ -81,7 +81,6 @@ function painter () {
     case buttons[4].classList.value == "selected": /*Clear*/
       break; /* Described in buttonClick() */
   }
-
 }
 
 const buttons = document.querySelectorAll('.frame1 button');
