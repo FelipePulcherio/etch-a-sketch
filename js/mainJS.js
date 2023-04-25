@@ -11,6 +11,9 @@ function hoverOut () {
 
 function buttonClick () {
   if (this.textContent === "Clear canvas") return;
+  const buttons = document.querySelectorAll('.frame1 button');
+  buttons.forEach(button => button.classList.remove('selected'));
+
   this.classList.toggle('selected');
 }
 
