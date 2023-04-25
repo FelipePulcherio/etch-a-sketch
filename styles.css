@@ -168,3 +168,15 @@ input[type=range]::-webkit-slider-runnable-track {
   margin: 0px;
   padding: 0px;
 }
+
+.frame1 .hover {
+  transform: scale(1.1);
+}
+
+.frame1 .selected {
+  font-weight: 600;
+  color: white;
+  background-color: rgb(230, 80, 80);
+  border: solid rgb(200, 200, 200) 1px;
+  box-shadow: 0px 0px 8px rgb(200, 200, 200);
+}
