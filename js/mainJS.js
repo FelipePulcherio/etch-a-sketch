@@ -10,7 +10,7 @@ function hoverOut () {
 }
 
 function buttonClick () {
-  if (this.textContent === "Clear canvas") return;
+  /*if (this.textContent === "Clear canvas") return;*/
   const buttons = document.querySelectorAll('.frame1 button');
   buttons.forEach(button => button.classList.remove('selected'));
   this.classList.toggle('selected');
@@ -36,12 +36,36 @@ function gridHandler () {
     let newDiv = document.createElement('div');
     canvas.appendChild(newDiv);
     newDiv.setAttribute('style', `width: ${newWidth}px; height: ${newHeight}px;`);
+    newDiv.addEventListener('mousedown', painter);
   }
 }
 
 function inputChangeHandler () {
   const selection = document.querySelector('.sliderContainer .text');
   selection.textContent = `${this.value} x ${this.value}`;
+}
+
+function painter () {
+  const buttons = document.querySelectorAll('.frame1 button');
+
+  switch (true) {
+    case buttons[0].classList.value == "selected": /*Classic*/
+      this.style['background-color'] = "#404040";
+      break;
+    case buttons[1].classList.value == "selected": /*Advanced*/
+      this.style['background-color'] = "#000000";
+      break;
+    case buttons[2].classList.value == "selected": /*Rainbow*/
+      his.style['background-color'] = "#404040";
+      break;
+    case buttons[3].classList.value == "selected": /*Eraser*/
+      this.style['background-color'] = "#CCCCCC";
+      break;
+    case buttons[4].classList.value == "selected": /*Clear*/
+      this.style['background-color'] = "#404040";
+      break;
+  }
+
 }
 
 const buttons = document.querySelectorAll('.frame1 button');
@@ -51,5 +75,8 @@ buttons.forEach( (button) => button.addEventListener('click', buttonClick) );
 const rangeInput = document.querySelector('input[type="range"]');
 rangeInput.addEventListener('input',inputChangeHandler);
 rangeInput.addEventListener('change',gridHandler);
+
+const canvasDivs = document.querySelectorAll('.canvas > div');
+canvasDivs.forEach((div) => div.addEventListener('mousedown', painter));
 
 gridHandler();
