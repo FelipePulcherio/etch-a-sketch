@@ -13,11 +13,11 @@ function buttonClick () {
   if (this.textContent === "Clear canvas") return;
   const buttons = document.querySelectorAll('.frame1 button');
   buttons.forEach(button => button.classList.remove('selected'));
-
   this.classList.toggle('selected');
 }
 
-function gridHandler (a) {
+function gridHandler () {
+  const a = document.querySelector('input[type="range"]');
   const oldDivs = document.querySelectorAll('.canvas div');
   oldDivs.forEach(div => div.remove());
 
@@ -30,7 +30,7 @@ function gridHandler (a) {
   const gridSize = a.value * a.value;
 
   canvas.setAttribute('style', `width: ${maxWidth}px; height: ${maxHeight}px;`);
-  console.log(`${maxWidth}, ${maxHeight}, ${newWidth}, ${newHeight}`);
+  /*console.log(`${maxWidth}, ${maxHeight}, ${newWidth}, ${newHeight}`);*/
 
   for (let i = 0; i < gridSize; i++) {
     let newDiv = document.createElement('div');
@@ -42,7 +42,6 @@ function gridHandler (a) {
 function inputChangeHandler () {
   const selection = document.querySelector('.sliderContainer .text');
   selection.textContent = `${this.value} x ${this.value}`;
-  gridHandler(this);
 }
 
 const buttons = document.querySelectorAll('.frame1 button');
@@ -51,5 +50,6 @@ buttons.forEach( (button) => button.addEventListener('click', buttonClick) );
 
 const rangeInput = document.querySelector('input[type="range"]');
 rangeInput.addEventListener('input',inputChangeHandler);
+rangeInput.addEventListener('change',gridHandler);
 
-gridHandler(rangeInput);
+gridHandler();
