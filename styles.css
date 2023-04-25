@@ -23,6 +23,7 @@ body {
   width: 1000px;
   display: flex;
   padding-top: 30px;
+  gap: 30px;
 }
 
 .frame1 {
