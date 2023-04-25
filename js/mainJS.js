@@ -57,7 +57,9 @@ function painter () {
       this.style['background-color'] = document.querySelector('.color-picker').value;
       break;
     case buttons[1].classList.value == "selected": /*Advanced*/
-      this.style['background-color'] = "#000000";
+      let oldBgColor = getComputedStyle(this).backgroundColor;
+      let newBgColor = advancedColor(oldBgColor);
+      this.style['background-color'] = newBgColor;
       break;
     case buttons[2].classList.value == "selected": /*Rainbow*/
       let randomR = parseInt(Math.random()*256);
