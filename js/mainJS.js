@@ -48,3 +48,5 @@ buttons.forEach( (button) => button.addEventListener('click', buttonClick) );
 
 const rangeInput = document.querySelector('input[type="range"]');
 rangeInput.addEventListener('input',inputChangeHandler);
+
+gridHandler(rangeInput);
