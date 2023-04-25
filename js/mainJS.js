@@ -10,7 +10,11 @@ function hoverOut () {
 }
 
 function buttonClick () {
-  /*if (this.textContent === "Clear canvas") return;*/
+  if (this.textContent === "Clear canvas") {
+    const canvasDivs = document.querySelectorAll('.canvas > div');
+    canvasDivs.forEach((div) => div.style['background-color'] = "#CCCCCC");
+    return;
+  }
   const buttons = document.querySelectorAll('.frame1 button');
   buttons.forEach(button => button.classList.remove('selected'));
   this.classList.toggle('selected');
@@ -65,8 +69,7 @@ function painter () {
       this.style['background-color'] = "#CCCCCC";
       break;
     case buttons[4].classList.value == "selected": /*Clear*/
-      this.style['background-color'] = "#404040";
-      break;
+      break; /* Described in buttonClick() */
   }
 
 }
