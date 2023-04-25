@@ -132,10 +132,6 @@ input[type=range]::-webkit-slider-runnable-track {
   align-items: flex-start;
   align-content: flex-start;
 }
-/*
-.canvas > div {
-  border: solid black 1px;
-}*/
 
 .frame2 .scrolls {
   width: 100%;
