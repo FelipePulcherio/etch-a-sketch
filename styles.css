@@ -129,16 +129,14 @@ input[type=range]::-webkit-slider-runnable-track {
   border-radius: 35px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
 }
-
+/*
 .canvas > div {
-  width: 100px;
-  height: 100px;
   border: solid black 1px;
-}
+}*/
 
 .frame2 .scrolls {
   width: 100%;
