@@ -54,7 +54,7 @@ function painter () {
 
   switch (true) {
     case buttons[0].classList.value == "selected": /*Classic*/
-      this.style['background-color'] = "#404040";
+      this.style['background-color'] = document.querySelector('.color-picker').value;
       break;
     case buttons[1].classList.value == "selected": /*Advanced*/
       this.style['background-color'] = "#000000";
@@ -84,5 +84,6 @@ rangeInput.addEventListener('change',gridHandler);
 
 const canvasDivs = document.querySelectorAll('.canvas > div');
 canvasDivs.forEach((div) => div.addEventListener('mousedown', painter));
+canvasDivs.forEach((div) => div.addEventListener('mouseover', painter));
 
 gridHandler();
