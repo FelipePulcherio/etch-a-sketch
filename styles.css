@@ -67,6 +67,7 @@ body {
   border-radius: 8px;
   margin-top: 22px;
   padding-top: 2px;
+  cursor: pointer;
 }
 
 .sliderContainer {
