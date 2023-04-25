@@ -49,6 +49,14 @@ function inputChangeHandler () {
   selection.textContent = `${this.value} x ${this.value}`;
 }
 
+function advancedColor (rgbString) {
+  let newString = rgbString.substr(4).replace(")","").replaceAll(" ","").split(",");
+  newString[0] = Number(newString[0]) - 30;
+  newString[1] = Number(newString[1]) - 30;
+  newString[2] = Number(newString[2]) - 30;
+  return `rgb(${newString[0]}, ${newString[1]}, ${newString[2]})`;
+}
+
 function painter () {
   const buttons = document.querySelectorAll('.frame1 button');
 
