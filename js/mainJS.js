@@ -9,8 +9,8 @@ function hoverOut () {
   this.classList.remove('hover');
 }
 
-function buttonClick () {
-  if (this.textContent === "Clear canvas") {
+function buttonClick (a) {
+  if ((this.textContent === "Clear canvas") || (a === 1)) {
     const canvasDivs = document.querySelectorAll('.canvas > div');
     canvasDivs.forEach((div) => div.style['background-color'] = "#CCCCCC");
     return;
@@ -90,7 +90,6 @@ function painter () {
 }
 
 function removePainter () {
-  console.log("ESTE CARALHO");
   const canvasDivs = document.querySelectorAll('.canvas > div');
   canvasDivs.forEach((div) => div.removeEventListener('mouseover', painter));
   canvasDivs.forEach((div) => div.addEventListener('mousedown', painter));
@@ -107,4 +106,5 @@ rangeInput.addEventListener('change',gridHandler);
 const canvasDivs = document.querySelectorAll('.canvas > div');
 canvasDivs.forEach((div) => div.addEventListener('mousedown', painter));
 
-gridHandler();
+gridHandler(1);
+buttonClick ();
