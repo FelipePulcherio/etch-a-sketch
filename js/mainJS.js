@@ -41,6 +41,7 @@ function gridHandler () {
     canvas.appendChild(newDiv);
     newDiv.setAttribute('style', `width: ${newWidth}px; height: ${newHeight}px;`);
     newDiv.addEventListener('mousedown', painter);
+    newDiv.setAttribute('draggable',false);
   }
 }
 
@@ -59,6 +60,11 @@ function advancedColor (rgbString) {
 
 function painter () {
   const buttons = document.querySelectorAll('.frame1 button');
+
+  const canvasDivs = document.querySelectorAll('.canvas > div');
+  canvasDivs.forEach((div) => div.removeEventListener('mousedown', painter));
+  canvasDivs.forEach((div) => div.addEventListener('mouseover', painter));
+  canvasDivs.forEach((div) => div.addEventListener('mouseup', removePainter));
 
   switch (true) {
     case buttons[0].classList.value == "selected": /*Classic*/
@@ -83,6 +89,13 @@ function painter () {
   }
 }
 
+function removePainter () {
+  console.log("ESTE CARALHO");
+  const canvasDivs = document.querySelectorAll('.canvas > div');
+  canvasDivs.forEach((div) => div.removeEventListener('mouseover', painter));
+  canvasDivs.forEach((div) => div.addEventListener('mousedown', painter));
+}
+
 const buttons = document.querySelectorAll('.frame1 button');
 buttons.forEach( (button) => button.addEventListener('mouseover', hoverIn) );
 buttons.forEach( (button) => button.addEventListener('click', buttonClick) );
@@ -93,6 +106,5 @@ rangeInput.addEventListener('change',gridHandler);
 
 const canvasDivs = document.querySelectorAll('.canvas > div');
 canvasDivs.forEach((div) => div.addEventListener('mousedown', painter));
-canvasDivs.forEach((div) => div.addEventListener('mouseover', painter));
 
 gridHandler();
