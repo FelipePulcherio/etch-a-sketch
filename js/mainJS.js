@@ -106,5 +106,5 @@ rangeInput.addEventListener('change',gridHandler);
 const canvasDivs = document.querySelectorAll('.canvas > div');
 canvasDivs.forEach((div) => div.addEventListener('mousedown', painter));
 
-gridHandler(1);
-buttonClick ();
+gridHandler();
+buttonClick(1);
